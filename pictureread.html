@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS's Performance</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="SCSS/all.css">
+    <link rel="icon" href="images/face_icon.png" type="image/x-icon">
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="container-fluid bg-info">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light px-0 pr-lg-4">
+                <a class="navbar-brand logo" href="#">JS's Performance</a>
+                <button class="navbar-toggler mr-5" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-lg-center align-items-start ml-auto">
+                        <li class="nav-item mr-lg-4">
+                            <a class="nav-link menu-font" href="index.html">關於我 <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="facepoject.html">人臉辨識專案</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="dateexchange.html">資料交換功能</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="pictureread.html">圖片存讀功能</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="vsto.html">增益集功能</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <header class="header">
+        <div class="title-block-l">
+            <h1 class="title">
+                Personal Display Space</br>& Growing Experience
+            </h1>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="slider bg-cover" style="background-image: url(images/backgrund4.jpg)"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider bg-cover" style="background-image: url(images/backgrund5.jpg)"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider bg-cover" style="background-image: url(images/backgrund3.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <section class="container mt-lg-7 mt-4">
+        <div class="row justify-content-between">
+            <div class="col-lg-8 d-lg-block d-none">
+                <div class="pr-lg-4">
+                    <a href="#" class="d-block album-cover album-cover-xl"
+                        style="background-image: url(images/FileStream.jpg)"></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h2 >
+                    　
+                </h2>
+                <h2 class="title-block-m">
+                    關於圖片存讀功能
+                </h2>
+                <p class="my-6 text-d">
+                    這個功能的起因是由於一個製造業的客戶需求，其開報工檢驗的時候，需要紀錄不良品的圖片，直接用APP上傳到SERVER。
+                    後續也需要用網頁追蹤，所以使用FileStream的功能，搭配寫好的API，將圖片檔案做儲存、讀取、刪除的管理，其詳細代碼可參考我的GitHun(已去除可識別資料)。
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container mt-lg-7 mt-4">
+        
+                <!-- API Start -->
+
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h1 class="mb-4">FileStream設置</h1>
+                        <p> 首先資料庫必須要啟用FileStream功能。然後於SERVER建立IIS服務站台，最後將API發佈到SERVER上。
+                        </p>
+                        
+                    </div>
+                    <div class="col-lg-3"></div>
+        
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-7">
+                        <a class="d-block album-cover album-cover-xl" style="background-image: url(images/FileStore1.png)"></a>
+                        
+                    </div>
+                    <div class="col-lg-2"></div>
+        
+                </div>
+                <!-- API End -->
+
+                <!-- Fn Start -->
+
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h1 class="mb-4">實際呼叫的範例</h1>
+                        <p>API 與測試方式</p>
+
+                        <p>檔案上傳 /api/fs/upload</p>        
+                        <p>檔案下載 /api/fs/download</p>       
+                        <p>檔案刪除 /api/fs/delete</p>     
+                        <p>API 與測試方式</p>        
+                        <p>DB: FileStore @ localhost sa / XXXXX</p>       
+                        <p>Server URL: http://localhost/api/fs</p>       
+                        <p>KEY: 請在 Header 中加入 API_KEY: @@@API-KEY@@@</p>       
+                        <p>檔案上傳 <server_url>/api/fs/upload</p>       
+                        <p>Action: POST</p>      
+                        <p>Body: Mutipart</p>     
+                        <p>File 檔案路徑</p>       
+                        <p>ContentType 檔案的MIME-TYPE</p>      
+                        <p>RefNo 給應用程式利用的參考</p>      
+                        <p>Return: File ID (fs_id) 檔案存取索引ID</p>    
+                        
+                    </div>
+                    <div class="col-lg-3"></div>
+        
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <a class="d-block album-cover album-cover-xl" style="background-image: url(images/FileStore3.png)"></a>
+                        <!-- <img src="images/FileStore3.png"> -->
+                        
+                    </div>
+                    <div class="col-lg-0"></div>
+        
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <a class="d-block album-cover album-cover-xl" style="background-image: url(images/FileStore4.png)"></a>
+                        <!-- <img src="images/FileStore4.png"> -->
+                        
+                    </div>
+                    <div class="col-lg-1"></div>
+        
+                </div>
+                <!-- Fn End -->
+
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="container-fluid bg-info mt-5">
+        <div class="container py-3">
+            <div class="row align-items-lg-end align-items-center">
+                <div class="col-md col-lg-7 text-left">
+                    <a href="" class="logo ">JS's Performance</a>
+                    <p class="text-dark text-xs  mt-9">
+                        <h5 class="fa fa-map-marker-alt text-secondary"></h5> 新北市新莊區化成路<br>
+                        <h5 class="fa fa-phone-alt text-secondary"></h5> 0936-991-022 | <h5 class="fa fa-envelope text-secondary"></h5> top80276@yahoo.com.tw
+                    </p>
+                </div>
+                <div class="col-lg-5 mt-2">
+                    <div class="d-flex justify-content-lg-end flex-lg-nowrap flex-wrap">
+                        <ul class="d-flex social-meds p-0 mb-1">
+                            <li><a class="text-dark" href="https://github.com/top80276"><i class="fab fa-github"></i></a></li>
+                            <li><a class="text-dark ml-3" href="https://pda.104.com.tw/profile/share/jKHQqgKCjukmK8XkJ3lYnrDjKV66bXM2"><i class="fa fa-link"></i></a></li>
+                        </ul>
+
+
+                        <div class="input-group ml-lg-4 ml-0 mb-3">
+                            <div class="d-flex flex-column justify-content-start">
+                                <h3 class="text-dark ">Quick Links</h3>
+                                <li><a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>關於我</a></li>
+                                <li><a class="text-dark mb-2" href="facepoject.html"><i class="fa fa-angle-right mr-2"></i>人臉辨識專案</a></li>
+                                <li><a class="text-dark mb-2" href="dateexchange.html"><i class="fa fa-angle-right mr-2"></i>資料交換功能</a></li>
+                                <li><a class="text-dark mb-2" href="pictureread.html"><i class="fa fa-angle-right mr-2"></i>圖片存讀功能</a></li>
+                                <li><a class="text-dark mb-2" href="vsto.html"><i class="fa fa-angle-right mr-2"></i>增益集功能</a></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+     
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/603783971e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

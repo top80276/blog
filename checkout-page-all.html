@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkhaus-Handmade Patisserie-Check Out</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="SCSS/all.css">
+
+<body>
+    <nav class="container-fluid bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light px-0 pr-lg-4">
+                <a class="navbar-brand logo" href="index.html">Monkhaus</a>
+                <button class="navbar-toggler mr-5" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-lg-center align-items-start ml-auto">
+                        <li class="nav-item mr-lg-4">
+                            <a class="nav-link menu-font" href="#">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="shop-page.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item my-lg-0 my-2">
+                            <div class="form-inline flex-nowrap">
+                                <input class="form-control border-dark bg-transparent d-lg-none mr-1 toggle"
+                                    type="search" placeholder="Search" aria-label="Search" id="SearchBar">
+                                <a href="#" class="text-dark showSearchBar"><i class="nav-link fas fa-search"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="d-flex shopping-bag-container justify-content-end">
+            <a href="#" class="text-dark view-bag" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fas fa-shopping-bag"></i>
+                <!-- <span class="item-total">3</span> -->
+            </a>
+        </div>
+    </nav>
+    <main class="container mt-9">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div>
+                    <ul class="d-flex justify-content-between nav step-status-box">
+                        <li class="step-status" role="presentation">
+                            <a class="active" id="home-tab" data-toggle="tab" href="#checkout-1" role="tab"
+                                aria-controls="home" aria-selected="true">
+                                <p class="step-number active">1</p>
+                            </a>
+                            <p>Shopping<br> Cart</p>
+                        </li>
+                        <li class="step-status" role="presentation">
+                            <a id="home-tab" data-toggle="tab" href="#checkout-2" role="tab" aria-controls="home"
+                                aria-selected="true">
+                                <p class="step-number">2</p>
+                            </a>
+                            <p>Fill<br>Information</p>
+                        </li>
+                        <li class="step-status" role="presentation">
+                            <a id="home-tab" data-toggle="tab" href="#checkout-3" role="tab" aria-controls="home"
+                                aria-selected="true">
+                                <p class="step-number">3</p>
+                            </a>
+                            <p>Order<br>Confirmation</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content mt-5">
+                    <div class="tab-pane container active" id="checkout-1" role="tabpanel"
+                        aria-labelledby="checkout-1-tab">
+                        <div class="card border-secondary mb-4">
+                            <div class="card-body d-flex flex-wrap align-items-center">
+                                <p class="text-d mb-0 mr-auto">
+                                    Already a member? Login for easier order tracking and faster checkout!
+                                </p>
+                                <a class="btn btn-sm btn-primary menu-font my-lg-0 my-2" data-toggle="modal"
+                                    data-target="#loginModal">Login</a>
+                            </div>
+                        </div>
+                        <div class="card border-secondary mb-4">
+                            <div class="custom-card-header">
+                                Shopping Cart
+                            </div>
+                            <div class="card-body x-scrollable px-3">
+                                <table class="table ptsans-d">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">Product</th>
+                                            <th width="10%" class="border-top-0 text-center">Discount</th>
+                                            <th width="10%" class="border-top-0 text-center">Unit Price</th>
+                                            <th width="20%" class="border-top-0 text-center">QTY</th>
+                                            <th class="border-top-0 text-right text-table-head">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <a href="" class="text-dark text-center" data-toggle="modal"
+                                                    data-target="#deleteModal" data-title="Chocolate Rye"><i
+                                                        class="far fa-trash-alt mr-2"></i></a>
+                                                <img src="https://www.dovesfarm.co.uk/uploads/images/presets/product_page_full/recipes/DF%20Cake/600_Doves_LemonDrizzleCakeNew.jpg"
+                                                    class="align-text-top cart-img mr-2" alt="">
+                                                Chocolate Rye
+                                            </td>
+                                            <td class="align-middle"></td>
+                                            <td class="align-middle text-center">
+                                                £2.40
+                                            </td>
+                                            <td>
+                                                <div class="input-group input-group-sm">
+                                                    <div class="input-group-prepend">
+                                                        <a href="#" class="btn btn-sm"><i class="fas fa-plus"></i></a>
+                                                    </div>
+                                                    <input type="text" class="form-control text-center h-50"
+                                                        aria-label="minus" value="4">
+                                                    <div class="input-group-append">
+                                                        <a href="#" class="btn btn-sm"><i class="fas fa-minus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-right">£9.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <a href="" class="text-dark text-center" data-toggle="modal"
+                                                    data-target="#deleteModal" data-title="Cinnamon Swirl"><i
+                                                        class="far fa-trash-alt mr-2"></i></a>
+                                                <img src="https://www.dovesfarm.co.uk/uploads/images/presets/product_page_full/recipes/DF%20Cake/600_Doves_LemonDrizzleCakeNew.jpg"
+                                                    class="align-text-top cart-img mr-2" alt="">
+                                                Cinnamon Swirl
+                                            </td>
+                                            <td class="align-middle"></td>
+                                            <td class="align-middle text-center">
+                                                £2.50
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="input-group input-group-sm">
+                                                    <div class="input-group-prepend">
+                                                        <a href="#" class="btn btn-sm"><i class="fas fa-plus"></i></a>
+                                                    </div>
+                                                    <input type="text" class="form-control text-center h-50"
+                                                        aria-label="minus" value="4">
+                                                    <div class="input-group-append">
+                                                        <a href="#" class="btn btn-sm"><i class="fas fa-minus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-right">£10.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <a href="" class="text-dark text-center" data-toggle="modal"
+                                                    data-target="#deleteModal" data-title="Lemon Drizzle"><i
+                                                        class="far fa-trash-alt mr-2"></i></a>
+                                                <img src="https://www.dovesfarm.co.uk/uploads/images/presets/product_page_full/recipes/DF%20Cake/600_Doves_LemonDrizzleCakeNew.jpg"
+                                                    class="align-text-top cart-img mr-2" alt="">
+                                                Lemon Drizzle
+                                            </td>
+                                            <td class="align-middle"></td>
+                                            <td class="align-middle text-center">
+                                                £2.60
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="input-group input-group-sm ">
+                                                    <div class="input-group-prepend">
+                                                        <a href="#" class="btn btn-sm"><i class="fas fa-plus"></i></a>
+                                                    </div>
+                                                    <input type="text" class="form-control text-center h-50"
+                                                        aria-label="minus" value="1">
+                                                    <div class="input-group-append">
+                                                        <a href="#" class="btn btn-sm"><i class="fas fa-minus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-right">£2.60</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="5" class="text-table-head">Applied Promotions</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border-top-0">
+                                                <p class="badge badge-pill badge-secondary text-d mr-2">Free Shipping
+                                                </p>
+                                                <span>Free Shipping When You Spend Over £20</span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card border-secondary mb-3 h-100">
+                                    <div class="custom-card-header">Order Summary</div>
+                                    <div class="card-body">
+                                        <table class="table table-borderless text-dark ptsans-d">
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="row" colspan="3">Item Subtotal:</td>
+                                                    <td class="text-right">£20.22</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row" colspan="3">Shipping Fee:</td>
+                                                    <td class="text-right">£0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row" colspan="4">
+                                                        <a class="text-dark" data-toggle="collapse"
+                                                            href="#collapsecoupon" role="button" aria-expanded="false"
+                                                            aria-controls="collapsecoupon">
+                                                            Apply a coupon code
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row" colspan="4" class="collapse" id="collapsecoupon">
+                                                        <form class="form-inline">
+                                                            <div class="form-group mb-2 d-flex">
+                                                                <input type="text" class="form-control mr-2"
+                                                                    id="inputCoupon" placeholder="SALE20">
+                                                                <button type="submit"
+                                                                    class="btn btn-dark ml-auto menu-font">
+                                                                    Submit
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <th scope="row" colspan="3" class="border-top">Total</th>
+                                                <td class="text-right border-top">£20.22</td>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card border-secondary mb-3 h-100">
+                                    <div class="custom-card-header">Select Delivery & Payment Method</div>
+                                    <div class="card-body">
+                                        <form class="ptsans-d">
+                                            <div class="form-group">
+                                                <label for="selectCity">City</label>
+                                                <select class="form-control" id="selectCity">
+                                                    <option>London</option>
+                                                    <option>Manchester</option>
+                                                    <option>Leeds</option>
+                                                    <option>Liverpool</option>
+                                                    <option>Bristol</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="selectDelivery">Delivery Method</label>
+                                                <select class="form-control" id="selectDelivery">
+                                                    <option>Collect In Store</option>
+                                                    <option>DPL</option>
+                                                    <option>Hermes</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="selectPayment">Payment Method</label>
+                                                <select class="form-control" id="selectPayment">
+                                                    <option>Cash</option>
+                                                    <option>Credit Card</option>
+                                                    <option>Paypal</option>
+                                                </select>
+                                            </div>
+                                            <a href="#" class="action-btn w-100">Proceed To Check Out</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane container" id="checkout-2" role="tabpanel" aria-labelledby="checkout-2-tab">
+                        <div class="mb-4">
+                            <div class="card border-secondary">
+                                <p class="custom-card-header mb-0">
+                                    <a class="text-dark dropdown-toggle" data-toggle="collapse" role="button"
+                                        href="#multiCollapseExample1" aria-expanded="false"
+                                        aria-controls="multiCollapseExample1">Order Total: £20.22</a>
+                                </p>
+                                <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                                    <div class="x-scrollable px-3 mt-2">
+                                        <table class="table ptsans-d">
+                                            <thead>
+                                                <tr>
+                                                    <th class="border-top-0 text-table-head">Product Name</th>
+                                                    <th class="border-top-0 text-center text-table-head">Unit Price</th>
+                                                    <th width="25%" class="border-top-0 text-center text-table-head">QTY
+                                                    </th>
+                                                    <th class="border-top-0 text-right text-table-head">Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="align-middle">
+                                                        <img src="https://houseofnasheats.com/wp-content/uploads/2017/10/Moist-Chocolate-Cupcakes-Recipe-5-480x480.jpg"
+                                                            class="align-text-top cart-img mr-2" alt="">
+                                                        Chocolate Rye
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        £2.40
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        4
+                                                    </td>
+                                                    <td class="align-middle text-right">£9.60</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">
+                                                        <img src="https://houseofnasheats.com/wp-content/uploads/2017/10/Moist-Chocolate-Cupcakes-Recipe-5-480x480.jpg"
+                                                            class="align-text-top cart-img mr-2" alt="">
+                                                        Cinnamon Swirl
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        £2.50
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        4
+                                                    </td>
+                                                    <td class="align-middle text-right">£10.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">
+                                                        <img src="https://houseofnasheats.com/wp-content/uploads/2017/10/Moist-Chocolate-Cupcakes-Recipe-5-480x480.jpg"
+                                                            class="align-text-top cart-img mr-2" alt="">
+                                                        Lemon Drizzle
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        £2.60
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        1
+                                                    </td>
+                                                    <td class="align-middle text-right">£2.60</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th colspan="3" class="text-right">Discount</th>
+                                                    <td class="text-right">£0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="3" class="text-right border-top-0">Shipping Fee</th>
+                                                    <td class="text-right border-top-0">£0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="3" class="text-right border-top-0">Total</th>
+                                                    <td class="text-right border-top-0">£20.22</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card border-secondary h-100">
+                                    <div class="custom-card-header">Customer Info</div>
+                                    <div class="card-body">
+                                        <form class="ptsans-d">
+                                            <div class="form-group">
+                                                <label for="customerName">Full Name*</label>
+                                                <input class="form-control" id="customerName" type="text"
+                                                    placeholder="Mary Berry">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="customerPhone">Contact Number*</label>
+                                                <input type="tel" class="form-control" id="customerPhone"
+                                                    placeholder="012-345-678">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="customerEmail">Email*</label>
+                                                <input type="email" class="form-control" id="customerEmail"
+                                                    placeholder="hello@gmail.com">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="orderNotes">Order Notes</label>
+                                                <textarea class="form-control" id="orderNotes" rows="3"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card border-secondary mb-4">
+                                    <div class="custom-card-header">Shipping Detail</div>
+                                    <div class="card-body ptsans-d">
+                                        <p class="ptsans-bold">Selected Shipping Method: Collect In Store</p>
+                                        <form>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="recipientAsCustomer"
+                                                    value="option1">
+                                                <label class="form-check-label" for="recipientAsCustomer">Recipient Info:
+                                                    Same as customer info
+                                                </label>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <label for="recipientName">Recipient Name</label>
+                                                <input class="form-control" id="recipientName" type="text"
+                                                    placeholder="Mary Berry">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipientNumber">Recipient Contact Number</label>
+                                                <input class="form-control" id="recipientNumber" type="tel"
+                                                    placeholder="012-33-456">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="chooseStore">Choose Store</label>
+                                                <select multiple class="form-control" id="chooseStore">
+                                                    <option>Hackney</option>
+                                                    <option>Bank</option>
+                                                    <option>Shoreditch</option>
+                                                    <option>Paddington</option>
+                                                    <option>Covent Garden</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <div class="custom-card-header">
+                                        Payment Detail
+                                    </div>
+                                    <div class="card-body ptsans-d">
+                                        Selected Payment Method: <br><span class="ptsans-bold">Cash On Collection</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="card border-secondary mb-4">
+                                <div class="card-body w-75 mx-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            I agree to the shop’s terms of use & privacy policy
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Yes, send me email updates and promotions
+                                        </label>
+                                    </div>
+                                    <a href="#" class="action-btn w-100 mt-4 menu-font">Place Order</a>
+                                    <a href="#" class="d-block text-secondary mt-2 ptsans-d">Back To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="checkout-3" role="tabpanel" aria-labelledby="checkout-3-tab">
+                        <p class="h2 text-dark text-center ptsans-bold">THANK YOU FOR YOUR ORDER!</p>
+                        <p class="text-dark text-center ptsans-d">Order No. 0123000456</p>
+                        <div class="card boder-secondary mb-4">
+                            <div class="custom-card-header">
+                                Order Detail
+                            </div>
+                            <div class="x-scrollable px-3 mt-2">
+                                <table class="table ptsans-d">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0 text-table-head">Product Name</th>
+                                            <th class="border-top-0 text-center text-table-head">Unit Price</th>
+                                            <th width="25%" class="border-top-0 text-center text-table-head">QTY</th>
+                                            <th class="border-top-0 text-right text-table-head">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <img src="https://houseofnasheats.com/wp-content/uploads/2017/10/Moist-Chocolate-Cupcakes-Recipe-5-480x480.jpg"
+                                                    class="align-text-top cart-img mr-2" alt="">
+                                                Chocolate Rye
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                £2.40
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                4
+                                            </td>
+                                            <td class="align-middle text-right">£9.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <img src="https://houseofnasheats.com/wp-content/uploads/2017/10/Moist-Chocolate-Cupcakes-Recipe-5-480x480.jpg"
+                                                    class="align-text-top cart-img mr-2" alt="">
+                                                Cinnamon Swirl
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                £2.50
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                4
+                                            </td>
+                                            <td class="align-middle text-right">£10.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <img src="https://houseofnasheats.com/wp-content/uploads/2017/10/Moist-Chocolate-Cupcakes-Recipe-5-480x480.jpg"
+                                                    class="align-text-top cart-img mr-2" alt="">
+                                                Lemon Drizzle
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                £2.60
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                1
+                                            </td>
+                                            <td class="align-middle text-right">£2.60</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="3" class="text-right">Discount</th>
+                                            <td class="text-right">£0</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3" class="text-right border-top-0">Shipping Fee</th>
+                                            <td class="text-right border-top-0">£0</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3" class="text-right border-top-0">Total</th>
+                                            <td class="text-right border-top-0">£20.22</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card boder-secondary mb-4">
+                            <div class="custom-card-header">
+                                Billing & Shipping Info
+                            </div>
+                            <div class="table-responsive px-3 mt-4">
+                                <table class="table ptsans-d w-75 mx-auto">
+                                    <tbody>
+                                        <tr>
+                                            <th class="border-top-0">Customer</th>
+                                            <td class="border-top-0">Mary Berry</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="border-top-0">Shipping Method</th>
+                                            <td class="border-top-0">Collect In Store (South London)</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="border-top-0">Payment Method</th>
+                                            <td class="border-top-0">Cash On Collection</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="border-top-0">Contact Number</th>
+                                            <td class="border-top-0">0739-700-2968</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-primary mt-5">
+        <div class="container py-3">
+            <div class="row align-items-lg-end align-items-center">
+                <div class="col-md col-lg-7 text-left">
+                    <a href="" class="logo">Monkhaus</a>
+                    <p class="text-dark text-xs">
+                        68 Church Street, Manchester<br>
+                        012-345-6789 | hello@monkhaus.uk
+                    </p>
+                </div>
+                <div class="col-lg-5 mt-2">
+                    <div class="d-flex justify-content-lg-end flex-lg-nowrap flex-wrap">
+                        <ul class="d-flex social-meds p-0 mb-1">
+                            <li><a class="text-dark" href=""><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a class="text-dark ml-3" href=""><i class="fab fa-instagram-square"></i></a></li>
+                            <li><a class="text-dark ml-3" href=""><i class="fab fa-youtube-square"></i></a></li>
+                        </ul>
+                        <div class="input-group ml-lg-4 ml-0 mb-3">
+                            <input type="text" class="form-control border-dark rounded-left bg-transparent h-100"
+                                aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                                placeholder="Keep Up With Us">
+                            <div class="input-group-append">
+                                <button class="btn-theme rounded-right h-100" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark text-lg-right text-xs">
+                        Copyright 2020 Monkhaus | Web Designed by PMR
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   刪除商品modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-dark">
+                    <h5 class="modal-title theme-font-bold" id="deleteModal">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-d">
+                    <p>Are you sure you want to remove this item?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--   登入會員modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-dark">
+                    <h5 class="modal-title theme-font-bold" id="deleteModal">Member Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-d">
+                    <form class="ptsans-d">
+                        <div class="form-group">
+                            <label for="customerName">Email</label>
+                            <input class="form-control" id="customerName" type="text" placeholder="user@gmail.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerName">Password</label>
+                            <input type="text" class="form-control" id="customerName" placeholder="******" required>
+                        </div>
+                        <button class="btn action-btn w-100 my-5" type="submit">Submit</button>
+                        <a href="#" class="btn btn-outline-dark w-100 mb-3">Login With Facebook</a>
+                        <a href="#" class="btn btn-outline-dark w-100 mb-3">Login With Google+</a>
+                    </form>
+                    <a href="#" class="text-secondary" data-toggle="modal" data-dismiss="modal"
+                        data-target="#registerModal">
+                        <p class="text-center">Register for exclusive offers and the latest news</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--   註冊會員modal -->
+    <div class="modal fade" id="registerModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="registerModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-dark">
+                    <h5 class="modal-title theme-font-bold" id="registerModal">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-d">
+                    <a href="#" class="btn btn-outline-dark w-100 my-3">Login With Facebook</a>
+                    <a href="#" class="btn btn-outline-dark w-100 mb-5">Login With Google+</a>
+                    <form class="ptsans-d mb-2">
+                        <div class="form-group">
+                            <label for="registerName">Full Name*</label>
+                            <input class="form-control" id="registerName" type="text" placeholder="Lily Rose" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">Email*</label>
+                            <input type="text" class="form-control" id="registerEmail" placeholder="user@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Password*</label>
+                            <input type="text" class="form-control" id="registerPassword" placeholder="********" required>
+                            <small>8 characters Minimum</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPhone">Contact Number</label>
+                            <input class="form-control" id="registerPhone" type="tel" placeholder="012-345-678">
+                        </div>
+                        <button class="btn action-btn w-100 mt-3" type="submit">Submit</button>
+                    </form>
+                    <a href="#" class="text-secondary" data-toggle="modal" data-dismiss="modal" data-target="#loginModal">
+                        <p class="text-center">Already a member? Click to sign</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js source -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/603783971e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

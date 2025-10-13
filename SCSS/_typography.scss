@@ -1,0 +1,122 @@
+// font
+$BrandFont: 'Muli';
+$TitleFont: 'PT Sans';
+$ContentFont: 'Open Sans';
+
+.menu-font {
+  font-family: $BrandFont;
+  font-size: 16px;
+  font-weight: 600;
+}
+  
+.theme-font {
+  font-family: $BrandFont;
+}
+  
+.theme-font-bold {
+  font-family: $BrandFont;
+  font-weight: 600;
+}
+  
+.ptsans-bold {
+  font-family: $TitleFont;
+  font-weight: 600;
+}
+  
+.ptsans-d {
+  font-family: $TitleFont;
+}
+  
+.text-d {
+  font-family: $ContentFont;
+}
+  
+.text-xs {
+  font-family: $ContentFont;
+  font-size: 14px; 
+  font-weight: 300;
+}
+
+.title-block-l {
+  font-family: $TitleFont;
+  padding: 16px 24px 40px 16px;
+  background: $block-bg;
+  position: absolute;
+  bottom: 24px;
+  left: 72px;
+  z-index: 1;
+  .title {
+    font-weight: bold;
+    font-size: 42px;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    position: relative;
+    &:after {
+      content: "";
+      height: 6px;
+      width: 35%;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      bottom: -16px;
+    }
+  }
+}
+    
+@media only screen and (max-width: 768px) {
+  .title-block-l {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+    
+.title-block-m {
+  font-family: $TitleFont;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.1rem;
+  color: $dark;
+  text-transform: capitalize;
+  position: relative;
+  &:after {
+    content: "";
+    height: 6px;
+    width: 30%;
+    background: $dark;
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+  }
+}
+      
+    
+.title-block-s {
+  width: 70%;
+  font-family: $TitleFont;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 16px 16px 32px 16px;
+  background: $primary;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  .title {
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 0.1rem;
+    color: $dark;
+    position: relative;
+    &:after {
+      content: "";
+      height: 6px;
+      width: 35%;
+      background: $dark;
+      position: absolute;
+      left: 0px;
+      bottom: -16px;
+    }
+  }
+}

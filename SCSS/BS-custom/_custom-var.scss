@@ -1,0 +1,65 @@
+// Color system
+
+$gray-700: #505050;
+$primary:       #F7DBAF;
+$secondary:     #505050;
+$danger:        #EB474D;
+$light:         #FCFAF7;
+$dark:          #070707;
+
+$theme-colors: (
+  "primary": #F7DBAF,
+  "secondary": #505050,
+  "dark": #070707,
+  "light": #FCFAF7
+);
+
+// elements custom
+
+$navbar-light-color:                #070707;
+$navbar-light-hover-color:         lighten(#070707,20);
+$navbar-light-active-color:         #070707;
+$navbar-light-disabled-color:       lighten(#070707,30);
+$navbar-light-toggler-border-color: #070707;
+
+$yiq-text-dark:             #070707;
+$yiq-text-light:            #FCFAF7;
+
+$link-hover-decoration: none;
+
+$input-color: $dark;
+$input-focus-border-color:    $light;
+$input-placeholder-color:     $gray-700;
+$component-active-color:      $light;
+$table-dark-color:            $light;
+$dropdown-bg:                 $light;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacer: 1rem;
+$spacers: ();
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: 8px,
+    2: 12px,
+    3: 16px,
+    4: 24px,
+    5: 32px,
+    6: 48px,
+    7: 56px,
+    8: 64px,
+    9: 72px
+  ),
+  $spacers
+);
+
+// Grid columns
+
+$grid-gutter-width: 24px;
+
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Muli','PT Sans','Open Sans', "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$line-height-base:            1.6;

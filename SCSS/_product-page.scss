@@ -1,0 +1,17 @@
+.product-img {
+    cursor: pointer;
+
+    &.main {
+        height: 480px;
+    }
+
+    &.thumb {
+        height: 143px;
+    }
+}
+
+.add-to-bag {
+    .action-btn {
+        padding: 0.5rem 1.3rem;
+    }
+}

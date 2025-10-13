@@ -1,0 +1,61 @@
+// checkout page
+
+.step-status-box {
+  
+    position: relative;
+    
+    .step-status {
+        font-family: $TitleFont;
+        text-align: center;
+        line-height: 1.4em;
+        overflow-x: hidden;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $dark;
+            height: 1px;
+            width: calc(100% - 62px);
+            z-index: -1;
+        }
+    }
+}
+
+.step-number {
+    background: $gray-400;
+    color: $dark;
+    font-weight: bold;
+    padding: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    line-height: 0.8em;
+
+    &:hover, &.active {
+        background: $dark;
+        color: #fff;
+    }
+
+}
+
+.cart-img {
+    max-width: 24px;
+}
+  
+.x-scrollable {
+    overflow: auto;
+    display: block;
+    
+    table {
+      width: 100%;
+      min-width: 560px;
+      
+        td {
+        min-width: 50px;}
+    }
+}

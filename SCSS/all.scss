@@ -1,0 +1,12 @@
+// BS Custum Variables
+@import "BS-custom/custom-var";
+// BS Import
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// custom style
+@import "elements";
+@import "template";
+@import "typography";
+@import "shop-page";
+@import "checkout-page";
+@import "product-page";
+

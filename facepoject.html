@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS's Performance</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="SCSS/all.css">
+    <link rel="icon" href="images/face_icon.png" type="image/x-icon">
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="container-fluid bg-info">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light px-0 pr-lg-4">
+                <a class="navbar-brand logo" href="#">JS's Performance</a>
+                <button class="navbar-toggler mr-5" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-lg-center align-items-start ml-auto">
+                        <li class="nav-item mr-lg-4">
+                            <a class="nav-link menu-font" href="index.html">關於我 <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="facepoject.html">人臉辨識專案</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="dateexchange.html">資料交換功能</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="pictureread.html">圖片存讀功能</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="vsto.html">增益集功能</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <header class="header">
+        <div class="title-block-l">
+            <h1 class="title">
+                Personal Display Space</br>& Growing Experience
+            </h1>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="slider bg-cover" style="background-image: url(images/backgrund4.jpg)"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider bg-cover" style="background-image: url(images/backgrund5.jpg)"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider bg-cover" style="background-image: url(images/backgrund3.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <section class="container mt-lg-7 mt-4 py-md-3">
+        <div class="row">
+            <div class="col-12 d-flex flex-column flex-lg-row align-items-center">
+                <h5 class="title-block-m mr-lg-auto h-75 mx-5 mx-lg-0 mb-6 mb-lg-0">
+                    we're passionate about simplicity
+                </h5>
+                <p class="text-d w-75">
+                    此專案是我在資展國際(原資策會)學完後呈現的結果，一個人包辦資料收集、模型建構測試、應用價值分析、群眾人臉分析功能、人臉比對功能、打卡登入系統功能。將相應功能整合前後端，最後放置雲端server主機上測試使用，若有興趣可以參考我的GitHub。
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container mt-lg-7 mt-4">
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-md-4 mb-5">
+                <div class="theme-card h-100">
+                    <a class="d-block album-cover album-cover-portrait" style="background-image: url(images/think.png)">
+                        <div class="title-block-s mx-auto mt-n4">
+                            <h6 class="title">題目發想</h6>
+                        </div>
+                    </a>
+                    <p class="theme-card-text">
+                        一開始看到kaggle比賽中有依人臉照片分析血緣的比賽，依提供之數據集來分析照片血緣分析。覺得很好玩，繼續研究下去分析了一些參考文獻。
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-md-4 mb-5">
+                <div class="theme-card h-100">
+                    <a class="d-block album-cover album-cover-portrait" style="background-image: url(images/model.jpg)">
+                        <div class="title-block-s mx-auto mt-n4">
+                            <h6 class="title">模型選用</h6>
+                        </div>
+                    </a>
+                    <p class="theme-card-text">
+                        依參考文獻的研究，我最後選用 FaceNet、VGGFace模型來做後續的分析。並用MTCMM做多人偵測的模型。
+                    </p>
+                </div>
+            </div>
+            <div class="d-lg-block col-lg-4 d-none mb-md-4 mb-3">
+                <div class="theme-card h-100">
+                    <a class="d-block album-cover album-cover-portrait"
+                        style="background-image: url(images/python.jpg)">
+                        <div class="title-block-s mx-auto mt-n4">
+                            <h6 class="title">工具選用</h6>
+                        </div>
+                    </a>
+                    <p class="theme-card-text">
+                        主要選用python語言，用numpy和pandas整理資料，人臉分析和偵測用了deepface和opencv。應用使用nodejs整合前端和py檔。
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mt-lg-7 mt-4">
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-md-4 mb-5">
+                <div class="theme-card h-100">
+                    <a class="d-block album-cover album-cover-portrait"
+                        style="background-image: url(images/money2.jpeg)">
+                        <div class="title-block-s mx-auto mt-n4">
+                            <h6 class="title">價值分析1</h6>
+                        </div>
+                    </a>
+                    <p class="theme-card-text">
+                        分析人臉資訊部分可應用於分析表演或演講中分析台下有多少觀眾當下的的滿意比例，及分析受眾的大數年齡及性別。
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-md-4 mb-5">
+                <div class="theme-card h-100">
+                    <a class="d-block album-cover album-cover-portrait"
+                        style="background-image: url(images/money1.jpg)">
+                        <div class="title-block-s mx-auto mt-n4">
+                            <h6 class="title">價值分析2</h6>
+                        </div>
+                    </a>
+                    <p class="theme-card-text">
+                        照片比對部分，檢測多張照片的人臉特徵距離(1對多)，快速確認是否為同一人，可用於打卡系統或註冊登入系統。
+                    </p>
+                </div>
+            </div>
+            <div class="d-lg-block col-lg-4 d-none mb-md-4 mb-3">
+                <div class="theme-card h-100">
+                    <a class="d-block album-cover album-cover-portrait"
+                        style="background-image: url(images/python.jpg)">
+                        <div class="title-block-s mx-auto mt-n4">
+                            <h6 class="title">主機架設需求</h6>
+                        </div>
+                    </a>
+                    <p class="theme-card-text">
+                        由於有分析需求，測試過可用雲端server主機如Amazon EC2和的Azurz虛擬主機，推薦vcpu 4 RAM 16 GiB以上。
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-lg-7 mt-4">
+        <!-- Analyze Start -->
+        <div class="container-fluid py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+
+                        <p class="section-title pr-5"><span class="pr-2">人臉分析</span></p>
+
+                        <h1 class="mb-4">分析人臉的資訊</h1>
+                        <p>用VGG-Face模型，將人臉圖轉成2622維度的向量後，分析出人臉的年齡、性別、人種和情緒。</p>
+                        <div class="row pt-2 pb-4">
+
+                            <div class="col-6 col-md-8">
+                                <ul class="list-inline m-0">
+                                    <li class="py-2 border-top border-bottom"></i>年齡(皺紋、皮膚)</li>
+                                    <li class="py-2 border-bottom"></i>性別(臉型)</li>
+                                    <li class="py-2 border-bottom"></i>人種(膚色)</li>
+                                    <li class="py-2 border-bottom"></i>情緒(嘴角、眼角)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="col-lg-10">
+
+                            <img class="img-fluid rounded mb-5 mb-lg-0" src="images/analyze1.jpg">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div>
+                <h1 class="mb-4">以下為人臉分析Dome影片</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HWLeCEvo-pY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3"></div>
+
+        </div>
+        <!-- Analyze End -->
+
+        <!-- Ver Start -->
+        <div class="container-fluid py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <img class="img-fluid rounded mb-5 mb-lg-0" src="images/Verification1.jpg">
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="section-title pr-5"><span class="pr-2">人臉比對</span></p>
+                        <h1 class="mb-4">比對2人臉是否為同一人</h1>
+                        <p>用VGG-Face模型，將人臉圖轉成2622維度的向量後，分析出人臉的embedding，兩張圖片的向量會有對應的cosine
+                            distance，以及對應的閥值，距離在閥值內代表2張照片的特徵夠接近，判定為同一人。</p>
+                        <div class="row pt-2 pb-4">
+
+                            <div class="col-6 col-md-8">
+                                <ul class="list-inline m-0">
+                                    <li class="py-2 border-top border-bottom"></i>使用的模型(VGG-Face)</li>
+                                    <li class="py-2 border-bottom"></i>距離(cosine distance)</li>
+                                    <li class="py-2 border-bottom"></i>對應罰值(threshold)</li>
+                                    <li class="py-2 border-bottom"></i>判定是否為同一人(verified)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div>
+                <h1 class="mb-4">以下為人臉比對Dome影片</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fsKQ6fl1F2A"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3"></div>
+
+        </div>
+        <!-- Ver End -->
+
+        <!-- mtcnn Start -->
+        <div class="container-fluid py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <p class="section-title pr-5"><span class="pr-2">群眾分析</span></p>
+                        <h1 class="mb-4">群眾分析人臉的資訊</h1>
+                        <p>先使用MTCNN人臉偵測模型，將畫面中的人臉一個個偵測出來後，對每個人臉區塊拉出來，在對每個人臉分別作分析，最後統整起來。</p>
+                        <div class="row pt-2 pb-4">
+
+                            <div class="col-6 col-md-8">
+                                <ul class="list-inline m-0">
+                                    <li class="py-2 border-top border-bottom"></i>情緒統計</li>
+                                    <li class="py-2 border-bottom"></i>年齡統計</li>
+                                    <li class="py-2 border-bottom"></i>性別統計</li>
+                                    <li class="py-2 border-bottom"></i>情緒統計的滿意度(共有多少百分比是開心的)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="col-lg-12">
+                            <img class="img-fluid rounded mb-5 mb-lg-0" src="images/mtcnn1.jpg">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div>
+                <h1 class="mb-4">以下為群眾分析Dome影片</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bJLxXgmbFwU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3"></div>
+
+        </div>
+        <!-- mtcnn End -->
+
+        <!-- Cam Start -->
+        <div class="container-fluid py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <img class="img-fluid rounded mb-5 mb-lg-0" src="images/cam1.jpg">
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="section-title pr-5"><span class="pr-2">打卡登入系統</span></p>
+                        <h1 class="mb-4">打卡登入系統的資訊</h1>
+                        <p>先將員工的照片儲存後，分析其embedding，參數儲存至.pkl檔，當視訊鏡頭用opencv偵測到人臉後，對應embedding，可找出是哪員工，名字和時間紀錄於csv檔，完成每日打卡或登入紀錄。
+                        </p>
+                        <div class="row pt-2 pb-4">
+
+                            <div class="col-6 col-md-8">
+                                <ul class="list-inline m-0">
+                                    <li class="py-2 border-top border-bottom"></i>找出是哪個人(找出embedding最相近且判定為同一人)</li>
+                                    <li class="py-2 border-bottom"></i>對應時間</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div>
+                <h1 class="mb-4">以下為打卡系統Dome影片</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/47_YTzjwEAk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-3"></div>
+
+        </div>
+        <!-- Cam End -->
+
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="container-fluid bg-info mt-5">
+        <div class="container py-3">
+            <div class="row align-items-lg-end align-items-center">
+                <div class="col-md col-lg-7 text-left">
+                    <a href="" class="logo ">JS's Performance</a>
+                    <p class="text-dark text-xs  mt-9">
+                        <h5 class="fa fa-map-marker-alt text-secondary"></h5> 新北市新莊區化成路<br>
+                        <h5 class="fa fa-phone-alt text-secondary"></h5> 0936-991-022 | <h5 class="fa fa-envelope text-secondary"></h5> top80276@yahoo.com.tw
+                    </p>
+                </div>
+                <div class="col-lg-5 mt-2">
+                    <div class="d-flex justify-content-lg-end flex-lg-nowrap flex-wrap">
+                        <ul class="d-flex social-meds p-0 mb-1">
+                            <li><a class="text-dark" href="https://github.com/top80276"><i class="fab fa-github"></i></a></li>
+                            <li><a class="text-dark ml-3" href="https://pda.104.com.tw/profile/share/jKHQqgKCjukmK8XkJ3lYnrDjKV66bXM2"><i class="fa fa-link"></i></a></li>
+                        </ul>
+
+
+                        <div class="input-group ml-lg-4 ml-0 mb-3">
+                            <div class="d-flex flex-column justify-content-start">
+                                <h3 class="text-dark ">Quick Links</h3>
+                                <li><a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>關於我</a></li>
+                                <li><a class="text-dark mb-2" href="facepoject.html"><i class="fa fa-angle-right mr-2"></i>人臉辨識專案</a></li>
+                                <li><a class="text-dark mb-2" href="dateexchange.html"><i class="fa fa-angle-right mr-2"></i>資料交換功能</a></li>
+                                <li><a class="text-dark mb-2" href="pictureread.html"><i class="fa fa-angle-right mr-2"></i>圖片存讀功能</a></li>
+                                <li><a class="text-dark mb-2" href="vsto.html"><i class="fa fa-angle-right mr-2"></i>增益集功能</a></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+     
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/603783971e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
